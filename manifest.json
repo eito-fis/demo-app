@@ -2,14 +2,16 @@
 	"manifest_version":1,
 	"type":"WebApp",
 	"meta":{
-		"name":"Demo App",
+		"name":"Logging Tester",
 		"version":"1.0.0",
 		"minimum-overwolf-version":"0.77.10",
-		"author":"Developer Name",
+		"author":"Eamon",
 		"icon":"IconMouseOver.png",
 		"icon_gray":"IconMouseNormal.png",
-		"description":"Demo App"
+		"description":"Logging Tester",
+        "game_targeting": {"type": "all"}
 	},
+    "permissions": ["Logging"],
 	"data": {
 		"start_window":"MainWindow",
 		"windows":{
