@@ -8,7 +8,8 @@
 		"author":"Eamon",
 		"icon":"IconMouseOver.png",
 		"icon_gray":"IconMouseNormal.png",
-		"description":"Logging Tester"
+		"description":"Logging Tester",
+        "game_targeting": {"type": "all"}
 	},
     "permissions": ["Logging"],
 	"data": {
