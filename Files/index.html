@@ -99,7 +99,7 @@
     </head>
 
     <body>
-        <div class="content" onmousedown="dragMove();">
+        <div class="content">
 
             <header>
 
@@ -115,6 +115,7 @@
                         <svg class="svg-icon-fill">
                             <use xlink:href="assets/svg/sprite.svg#window-control_settings" />
                         </svg>
+                    b
                     </button>
 
                     <button class="window-control" onclick="minimize()">
@@ -156,15 +157,5 @@
                 <img id="screenshot" width="300px"></img>
             </main>
         </div>
-
-        <div class="resize horizontal top" onmousedown="dragResize('Top');"></div>
-        <div class="resize vertical left" onmousedown="dragResize('Left');"></div>
-        <div class="resize vertical right" onmousedown="dragResize('Right');"></div>
-        <div class="resize horizontal bottom" onmousedown="dragResize('Bottom');"></div>
-
-        <div class="resize corner top-left" onmousedown="dragResize('TopLeft');"></div>
-        <div class="resize corner top-right" onmousedown="dragResize('TopRight');"></div>
-        <div class="resize corner bottom-left" onmousedown="dragResize('BottomLeft');"></div>
-        <div class="resize corner bottom-right" onmousedown="dragResize('BottomRight');"></div>
     </body>
 </html>
