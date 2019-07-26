@@ -105,9 +105,22 @@
                                         mouse_value.x,
                                         mouse_value.y,
                                         mouse_value.onGame));
-                    alert(log[log.length].x);
                 }
             );
+
+            //TODO: Clean up this mess
+            overwolf.games.inputTracking.onKeyDown.addListener(
+                function(key_value) {
+                    overwolf.games.inputTracking.getMousePosition(
+                        function(mouse_pos_value) {
+                            log.push(new Action(key_value.key,
+                                                mouse_pos_value.x,
+                                                mouse_pos_value.y));
+                        }
+                    );
+                }
+            );
+
         </script>
     </head>
 
