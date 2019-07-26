@@ -89,11 +89,23 @@
                 overwolf.extensions.launch("lmkhofgknaclgcdplfkgcahdkdmomimaoklioonf");
             };
 
+            // --- LOGGING TESTING ---
+            var log = []
+
+            function Action(key, x, y, on_game) {
+                this.key = key;
+                this.x = x;
+                this.y = y;
+                this.on_game = on_game;
+            }
+            
             overwolf.games.inputTracking.onMouseDown.addListener(
-                function(value) {
-                    console.log("TEST");
-                    alert("Test!");
-                    alert(value);
+                function(mouse_value) {
+                    log.push(new Action(0,
+                                        mouse_value.x,
+                                        mouse_value.y,
+                                        mouse_value.onGame));
+                    alert(log[log.length].x);
                 }
             );
         </script>
