@@ -89,6 +89,13 @@ overwolf.games.inputTracking.onKeyDown.addListener(
     }
 );
 
+function logError(error) {
+    plugin.get().writeLocalAppDataFile("error.txt", error, function(status, message)
+        {
+            console.log(arguments);
+        });
+}
+
 
 //Overwolf game events
 var g_interestedInFeatures = [
@@ -110,10 +117,7 @@ function registerEvents() {
     // general events errors
     overwolf.games.events.onError.addListener(function(info) {
         console.log("Error: " + JSON.stringify(info));
-        plugin.get().writeLocalAppDataFile("error.txt", JSON.stringify(info), function(status, message)
-            {
-                console.log(arguments);
-            });
+        logError(JSON.stringify(info))
     });
 
     // "static" data changed (total kills, username, steam-id)
