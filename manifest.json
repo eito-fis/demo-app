@@ -13,6 +13,7 @@
 	},
     "permissions": ["Logging"],
 	"data": {
+        "game_events":[5426],
 		"start_window":"MainWindow",
 		"windows":{
 			"MainWindow":{
